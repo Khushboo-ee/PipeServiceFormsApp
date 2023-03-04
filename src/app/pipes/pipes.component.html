@@ -1,0 +1,34 @@
+<div style="text-align: center;width: 100%;">
+    <h1>Actual values</h1>
+<h2>Employee name: {{employeename}}</h2>    
+<h2>Employee salary: {{salary}}</h2>  
+<h2>Number: {{n}}</h2>  
+<h2>Percentage: {{x}}</h2>  
+<h2>Current Date: {{dt}}</h2> 
+<h2>Person info: {{person}}</h2>
+</div>
+
+<hr>
+
+<div style="text-align: center;width: 100%;">
+    <h1>Transformed values using pipes</h1>
+    <h2>Employee Name : {{employeename|uppercase}}</h2>
+    <h2>Employee Name : {{employeename|lowercase}}</h2> 
+    <h2>Employee Salary : {{salary|currency}}</h2> 
+    <h2>Employee Salary : {{salary|currency: "INR"}}</h2> 
+    <h2>Employee Salary : {{salary|currency: "EUR"}}</h2> 
+    <h2>Employee Salary : {{salary|currency: "GBP"}}</h2> <!--These can be checked using google currency format in angular-->
+    <h2>Number: {{n|number}}</h2>
+    <h2>Number format with decimal: {{n|number: ".2"}}</h2>
+    <h2>Percentage: {{x| percent}}</h2> 
+    <h2>Current Date: {{dt| date}}</h2> 
+    <h2>Short Date: {{dt| date: "shortDate"}}</h2>  
+    <h2>Long Date: {{dt| date: "longDate"}}</h2> 
+    <h2>Medium Date: {{dt| date: "mediumDate"}}</h2>  
+    <h2>Short Time: {{dt| date: "shortTime"}}</h2> 
+    <h2>Long Time: {{dt| date: "longTime"}}</h2> 
+    <h2>Specified Date format(d/M/y): {{dt| date: "(d/M/y)"}}</h2>    
+    <h2>Specified Date format(d-M-y): {{dt| date: "(d-M-y)"}}</h2> 
+    <h2>Time format (HH:MM:SS): {{dt| date: "HH:MM:SS"}}</h2>
+    <h2>Person info: {{person| json}}</h2>
+</div>

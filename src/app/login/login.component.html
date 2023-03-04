@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Login Here
+            </div>
+            <div class="card-body">
+                <form #frmLogin="ngForm">
+                Username:
+                <input type="text" [(ngModel)]="username" class="form-control" #uinfo="ngModel" required>  <!--#uinfo is the name assigned to this textbox -->
+                <div *ngIf="uinfo.touched && uinfo.invalid">
+                    <p *ngIf="uinfo.errors.required" class="alert alert-danger">Username is required</p>
+                </div><br>
+                Password:
+                <input type="password" [(ngModel)]="password" class="form-control" #pinfo="ngModel" required/>
+                <div *ngIf="pinfo.touched && pinfo.invalid">
+                    <p *ngIf="pinfo.errors.required" class="alert alert-danger">Password is required</p>
+                </div><br>
+                <input type="submit" value="login here" class="btn btn-primary" 
+                (click)="CheckLoginDetails(frmLogin)" /><br><br>
+                <p>{{msg}}</p>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+<!-- <div style="width: 50%">
+Username: <input type="text" [(ngModel)] = "username" />
+<br ><br >
+Password: <input type="password" [(ngModel)] = "password" />
+<br ><br >
+<input type="button" value="Login Here" (click)="CheckLoginDetails()">
+<br ><br >
+<p>{{msg}}</p>
+</div> -->
