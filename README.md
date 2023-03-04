@@ -1,3 +1,1 @@
-Using pipes feature
-Form validations
-Services
+Creating Sample user login form and user registration form.
